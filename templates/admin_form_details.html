@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Form {{ form.key.urlsafe }}</title>
+	</head>
+	<body>
+		<form method="POST">
+			<label for="recipient">Recipient:</label>
+			<br />
+			<input type="text" name="recipient" id="recipient" value="{{ form.recipient|escape }}" />
+			<br />
+			
+			<label for="sender">Sender:</label>
+			<br />
+			<input type="text" name="sender" id="sender" value="{{ form.sender|escape }}" />
+			<br />
+			
+			<label for="subject">Subject:</label>
+			<br />
+			<input type="text" name="subject" id="subject" value="{{ form.subject|escape }}" />
+			<br />
+			
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

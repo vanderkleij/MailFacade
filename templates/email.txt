@@ -1,0 +1,3 @@
+{% for pair in pairs %}
+{{ pair.0|capfirst }}: {{ pair.1 }}
+{% endfor %}

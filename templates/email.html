@@ -1,0 +1,22 @@
+<html>
+	<body style="font-family: 'Helvetica Neue', Helvetica, Arial;">
+		{% with "15px" as padding %}   
+		<table style="width: 100%; max-width: 800px; border: 1px solid black; border-spacing: 0;">
+			<thead style="font-weight: 900; color: white; background: #00B3AB;">
+				<tr>
+					<th align="left" style="padding: {{ padding }};">Key</th>
+					<th align="left" style="padding: {{ padding }};">Value</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for pair in pairs %}
+				<tr style="background: #f6f6f6;">
+					<td style="padding: {{ padding }};">{{ pair.0|capfirst|escape|linebreaks }}</td>
+					<td style="padding: {{ padding }};">{{ pair.1|escape|linebreaks }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		{% endwith %}
+	</body>
+</html>

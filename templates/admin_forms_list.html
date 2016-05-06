@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Forms</title>
+	</head>
+	<body>
+		<a href="{% uri_for 'form-create' %}">Create new form</a>
+		<ul>
+			{% for form_key in form_keys %}
+			<li>
+				<a href="{% uri_for 'form-details' form_key %}">{{ form_key }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
