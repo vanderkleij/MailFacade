@@ -9,7 +9,7 @@ handlers:
   script: admin.app
   login: admin
   
-- url: .*
+- url: /[^.]+
   script: main.app
 
 libraries:
